@@ -49,10 +49,17 @@ namespace Gierka
         {
 
         }
-
+        // po kliknięciu na puste pole ukazuje nam się ikonka
         private void label1_Click(object sender, EventArgs e)
         {
+            Label clickedLabel = sender as Label;
 
+            if (clickedLabel != null)
+            {
+                if (clickedLabel.ForeColor == Color.Black)
+                    return;
+                clickedLabel.ForeColor = Color.Black;
+            }
         }
     }
 }
