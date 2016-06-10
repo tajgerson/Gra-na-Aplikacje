@@ -19,7 +19,7 @@ namespace Gierka
         public Form1()
         {
             InitializeComponent();
-            AssignIconsToSquares();
+            PrzypisanieIkon();
         }
 
         Random random = new Random();
@@ -28,7 +28,7 @@ namespace Gierka
         "r", "r", "s", "s", "b", "b", "x", "x",
         "Y", "Y", "N", "N", "(", "(", ")", ")"
     };  // te znaczki są to w "Webdings" znaczki z windowsa
-        private void AssignIconsToSquares() //dodawanie losowych ikon z listy
+        private void PrzypisanieIkon() //dodawanie losowych ikon z listy
         {
             foreach (Control control in tableLayoutPanel1.Controls) //pętlimy
             {
@@ -70,6 +70,7 @@ namespace Gierka
                 }
                 secondClicked = clickedLabel;
                 secondClicked.ForeColor = Color.Black;
+                konczeniegry(); // sprawdzanie czy gra sie konczy
 
                 if (firstClicked.Text == secondClicked.Text)
                 {
@@ -92,5 +93,23 @@ namespace Gierka
             firstClicked = null; //resetujemy pierwsszy i drugi klik i od nowa
             secondClicked = null;
         }
+
+    private void konczeniegry()
+    {
+
+        foreach (Control control in tableLayoutPanel1.Controls)
+        {
+            Label iconLabel = control as Label;
+
+            if (iconLabel != null)
+            {
+                if (iconLabel.ForeColor == iconLabel.BackColor)
+                    return;
+            }
+        }
+        MessageBox.Show("Połączyłeś wszystkie ikony, gratulacje!", "Koniec Gry");
+        Close();
+    }
+
     }
 }
