@@ -14,7 +14,8 @@ namespace Gierka
 {
     public partial class Form1 : Form
     {
-
+        Label firstClicked = null;
+        Label secondClicked = null;
         public Form1()
         {
             InitializeComponent();
@@ -58,7 +59,12 @@ namespace Gierka
             {
                 if (clickedLabel.ForeColor == Color.Black)
                     return;
-                clickedLabel.ForeColor = Color.Black;
+                if (firstClicked == null)
+                {
+                    firstClicked = clickedLabel;
+                    firstClicked.ForeColor = Color.Black;
+                    return;
+                }
             }
         }
     }
