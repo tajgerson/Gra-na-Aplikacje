@@ -107,9 +107,14 @@ namespace Gierka
                     return;
             }
         }
-        MessageBox.Show("Połączyłeś wszystkie ikony, gratulacje!", "Koniec Gry");
+        MessageBox.Show("Połączyłeś wszystkie ikony, gratulacje!   Twój czas to: " + czass + " sekund!" , "Koniec Gry");
         Close();
     }
-
+        private int czass=0;
+        private void timer2_Tick(object sender, EventArgs e)
+        {
+            czass = czass + 1;
+            czas.Text = czass.ToString();
+        }
     }
 }
