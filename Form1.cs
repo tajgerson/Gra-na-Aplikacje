@@ -30,9 +30,9 @@ namespace Gierka
     };  // te znaczki są to w "Webdings" znaczki z windowsa
         private void PrzypisanieIkon() //dodawanie losowych ikon z listy
         {
-            foreach (Control control in tableLayoutPanel1.Controls) //pętlimy
+            foreach (Control kontrola in tableLayoutPanel1.Controls) //pętlimy
             {
-                Label iconLabel = control as Label;
+                Label iconLabel = kontrola as Label;
                 if (iconLabel != null)
                 {
                     int randomNumber = random.Next(icons.Count);
@@ -97,9 +97,9 @@ namespace Gierka
     private void konczeniegry()
     {
 
-        foreach (Control control in tableLayoutPanel1.Controls)
+        foreach (Control kontrola in tableLayoutPanel1.Controls)
         {
-            Label iconLabel = control as Label;
+            Label iconLabel = kontrola as Label;
 
             if (iconLabel != null)
             {

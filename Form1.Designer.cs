@@ -306,6 +306,7 @@
             this.Controls.Add(this.label17);
             this.Controls.Add(this.czas);
             this.Controls.Add(this.tableLayoutPanel1);
+            this.ForeColor = System.Drawing.Color.DarkGreen;
             this.Name = "Form1";
             this.Text = "Gra w pamięć";
             this.Load += new System.EventHandler(this.Form1_Load);
