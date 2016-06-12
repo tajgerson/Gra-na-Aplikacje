@@ -26,7 +26,8 @@ namespace Gierka
         List<string> icons = new List<string>()
     {
         "r", "r", "s", "s", "b", "b", "x", "x",
-        "Y", "Y", "N", "N", "(", "(", ")", ")"
+        "Y", "Y", "N", "N", "(", "(", ")", ")",
+        "a", "a", "w", "w"
     };  // te znaczki są to w "Webdings" znaczki z windowsa
         private void PrzypisanieIkon() //dodawanie losowych ikon z listy
         {
